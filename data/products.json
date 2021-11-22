@@ -1,0 +1,31 @@
+{
+    "products": [
+        {
+            "name": "Vortex",
+            "brand": "EQT",
+            "description": "Our EQT Vortex is a complete bolt-on turbo that is manufactured with all brand new components and includes new installation hardware (pictured). The housings are modeled after the OEM IS20/IS38 turbochargers for proper fitment, but they are all brand new and original castings made and machined for the specific wheels we use. The turbine is a TD06SL2 wheel measuring at 61mm/54mm and the compressor is a custom billet wheel measuring at 53mm/71mm. The entire turbo is manufactured, assembled, and VSR balanced in a state of the art facility. The EQT Vortex is good for 450-480whp on pump gas and over 500-600whp on race gas or E85. Note that upgraded fueling and supporting mods are recommended to take full advantage of this turbo.",
+            "id": "7SAGDCXAW6U",
+            "category": "Performance",
+            "price": 1800,
+            "photos": ["/images/turbo.jpeg"]
+        },
+        {
+            "name": "Pilot sport 4s",
+            "brand": "Michellin",
+            "description": "Genuine Passion. Exceptional Drives. Derived from the legendary MICHELIN® PILOT® Super Sport, there is a new #1 in max performance summer tires. The new MICHELIN® Pilot® Sport 4 S offers exceptional grip, steering precision, and control, even at high speed",
+            "id": "&GDVYD44FG43",
+            "category": "Tires",
+            "price": 300,
+            "photos": ["/images/tire.jpeg"]
+        },
+        {
+            "name": "0W-40",
+            "brand": "Mobil 1",
+            "description": "Mobil 1™ 0W-40 Advanced Full Synthetic Motor Oil is engineered for the latest gasoline and diesel (without Diesel Particulate Filters or DPFs) engine technology delivering excellent all-round performance. It provides exceptional cleaning power, wear protection and overall performance.",
+            "id": "3ND8CBC7SC",
+            "category": "Maintenance",
+            "price": 15,
+            "photos": ["/images/oil.jpeg"]
+        }
+    ]
+}
