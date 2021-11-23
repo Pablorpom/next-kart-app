@@ -5,26 +5,14 @@ import data from '../data/products.json'
 import useKart from '../hooks/useKart';
 import Kart from '../components/Kart';
 import mapByProperty from '../utils/mapByProperty';
-import { useEffect } from 'react';
-
+import useLocalStorage from '../hooks/useLocalStorage';
 
 export default function Home(props) {
   const [kart, setKart, addItem, removeItem] = useKart();
   const productsById = mapByProperty(props.data, 'id');
   const kartItems = kart.map((id)=> productsById[id]);
 
-  useEffect(()=>{
-    const localStorageKart = localStorage.getItem('kart')
-    if(localStorageKart){
-      setKart(JSON.parse(localStorageKart))
-    } else {
-      setKart([])
-    }
-  },[setKart])
-
-  useEffect(()=>{
-    localStorage.setItem('kart', JSON.stringify(kart) )
-  },[kart])
+  useLocalStorage(kart, setKart, 'kart');
 
   return (
     <div className={styles.container}>
