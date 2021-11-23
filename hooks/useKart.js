@@ -1,8 +1,7 @@
-import useLocalStorage from "use-local-storage";
-
+import { useState } from "react";
 
 const useKart = (initialState = [])=> {
-    const [kart, setKart] = useLocalStorage('kart',initialState);
+    const [kart, setKart] = useState(initialState)
     const addItem = (id)=> {
         const index = kart.indexOf(id);
         if(index === -1){
@@ -15,7 +14,7 @@ const useKart = (initialState = [])=> {
         newKart.splice(index, 1)
         setKart(newKart)
     }
-    return [kart, addItem, removeItem]
+    return [kart, setKart, addItem, removeItem]
 }
 
 export default useKart;
