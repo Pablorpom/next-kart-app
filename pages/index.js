@@ -1,11 +1,11 @@
 import styles from '../styles/Home.module.css'
 
 import ProductsGrid from '../components/ProductsGrid'
-import data from '../data/products.json'
 import useKart from '../hooks/useKart';
 import Kart from '../components/Kart';
 import mapByProperty from '../utils/mapByProperty';
 import useLocalStorage from '../hooks/useLocalStorage';
+
 
 export default function Home(props) {
   const [kart, setKart, addItem, removeItem] = useKart();
@@ -22,7 +22,10 @@ export default function Home(props) {
   )
 }
 
-export async function getStaticProps() {
+
+export async function getServerSideProps() {
+  const res = await fetch(`http://localhost:3000/api/product`)
+   const data = await res.json()
   return {
     props: {
       data: data.products 
